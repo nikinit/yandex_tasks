@@ -10,22 +10,11 @@ function replaceForPalindrome(s) {
         }
     }
     for (let letter of Object.keys(chars)) {
-        odd = odd + (chars[letter] % 2 === 1 ? 1 : 0);
+        odd = odd + (chars[letter] % 2);
     }
     console.log(chars, odd);
     return odd < 2 ? true : false;
 }
 console.log(replaceForPalindrome('arozaupalan       alapuazora')) // true
 console.log(replaceForPalindrome('арозаупаланалапуазора')) // true
-
-let chars = {
-    'а' : 8,
-    'р' : 2,
-    'о' : 2,
-    'з' : 2,
-    'у' : 2,
-    'п' : 2,
-    'л' : 2,
-    'н' : 1
-}
-console.log(chars)
+console.log(replaceForPalindrome('аро,,,,,ланалапуазора')) // false

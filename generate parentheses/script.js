@@ -1,7 +1,12 @@
+// Дано целое число n. Требуется вывести все правильные 
+// скобочные последовательности длины 2 ⋅ n, 
+// упорядоченные лексикографически 
+// (см. https://ru.wikipedia.org/wiki/Лексикографический_порядок).
+// Условие: 1 <= n <= 11
 function getParentheses(n) {
     let res = [];
     function generate (p = [], left = 0, right = 0) {
-        console.log(p.join(''));
+        // console.log(p.join(''));
         if (p.length === 2 * n) {
             res.push(p.join(''));
         }
@@ -19,4 +24,4 @@ function getParentheses(n) {
     generate();
     return res;
 }
-console.log(getParentheses(3));
+console.log(getParentheses(11));

@@ -36,3 +36,5 @@ const getUnification = ((a1,a2)=>a1.concat(a2).sort((a,b)=>a-b));
 
 console.log(getUnification(first, second));
 console.log(getUnification(second, first));
+
+// два варианта здесь. первый закоменчен

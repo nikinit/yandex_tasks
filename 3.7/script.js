@@ -3,7 +3,7 @@
 // Необходимо вернуть какое число пропустили.
 const arr = [2, 3, 5, 1, 6];
 const findLost = (arr) => {
-    let sum = (1 + arr.length + 1) * (arr.length + 1) / 2;
+    let sum = (1 + arr.length + 1) * (arr.length + 1) / 2; // сумма арифметической прогрессии
     arr.forEach(e => sum -= e);
     return sum;
 }
