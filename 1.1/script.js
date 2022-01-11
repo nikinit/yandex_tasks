@@ -26,7 +26,7 @@ const randomBanner = (hubs) => {
     for (let i = 0; i < hubs.length; i++) {
         probability += hubs[i].w;
     }
-    let random = Math.floor(Math.random() * 160);
+    let random = Math.floor(Math.random() * probability);
     for (let i = 0; i < hubs.length; i++) {
         if (random - hubs[i].w < 0) {
             results[hubs[i].banner.id]++
@@ -37,10 +37,8 @@ const randomBanner = (hubs) => {
 }
 
 // checkup
-for (let i = 0; i < 10000; i++) {
-    for(let j = 0; j < 160; j++) {
-        randomBanner(hubs)
-    }
+for (let i = 0; i < 1600000; i++) {
+    randomBanner(hubs);
 }
 console.log(results);
 // console.log(randomBanner(hubs), results)
